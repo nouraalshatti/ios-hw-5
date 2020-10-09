@@ -3,39 +3,55 @@
  
 # واجب  - رقم5     
 # بداية المشروع النهائي 🥳
--  
+- الواجب راح يكون بسيط و خفيف و راح يكون بدايه مشروعكم النهائي
+-  راح اتحطون فكرتكم و تصميمكم (wireframe ) **in Action** 🥁
 ### خطوات 
-# واجب 
-### المحاضرة السابعة
-<img src="/Hw4Part1.gif" width="200px">
+1. قم بعمل Repository للمشروع النهائي
+2. اسم **Repository**  سيكون اسم المشروع بالانجليزي
+3. قم بعملة   Clone وحفظ الملف
+4. قم بفتح مشروع xcode جديد و حفظه في clone folder
+5. قم بتسميه المشروع في  xcode على اسم مشروع
 
-الفيديوهات  موجوده [هنا](https://app.code.kw/%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D9%8A%D9%81%D9%88%D9%86-%D9%85%D8%B9-%D8%B3%D9%88%D9%8A%D9%81%D8%AA-Swift-KFAS/ios-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA-%D8%B0%D8%A7%D8%AA-%D9%88%D8%A7%D8%AC%D9%87%D8%A7%D8%AA-%D9%85%D8%AA%D8%B9%D8%AF%D8%AF%D8%A9-KFAS/%D8%AF%D8%B1%D8%B3-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B9%D9%85-KFAS/%D9%85%D9%82%D8%AF%D9%85%D8%A9-%D8%B9%D9%86-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%B9%D9%85-KFAS) 
+## iOS✨
 
-## 🌟 بونص
-1. تصميم مميز ، أبهرونا! 🤩  
-2. قم باضافه Navigation Controller
-3. قم بتشغيل اغنيه لكل من الاغاني الموجوده
-4. اضافه UISlider للتحكم بالصوت
-5. وضع فيديوا في البرنامج
-6. ازرار للتنقل بين الاغاني ⏩⏪
+1. قم بعمل **Lunch Screen** و تتكون من لوفو البرنامج
+2. قم بوضع ايقونه البرنامج **App icon**
+فيديو للتوضح [هنا](https://www.youtube.com/watch?v=6kD1IZfGsWQ) 
+3. قم بتجهيز اول صفحتين  من المشروع , اذا كان عندكم sign in خلو اخر شي، يفضل ان تبدوا Home Screen
+4. قم بصنع **Struct** خاص في برنامجك 
+- مثلا اذا كان مشروعك عن حجز مطاعم
+```Swift  
 
-# 🎨✨الهام  
-<img src="/musicAppDesign.png" width="400px">
+struct Restaurant
+{
+    var restaurantName :String
+    var restaurantLocation :String
+    var availableTable : Int
+    var restaurantImage :String
+}
 
-# واجب  - Part2 
-### المحاضرة الثامنة
-1. قم باضافه TableView كما موضح في الصوره
-2. TableView عباره عن المغنين
-3. عند الضغط على الcell ، صفحه الاغاني ستظهر
-## 🌟 بونص
-1. قم باضافه sections بال tableview
-2. قم باضافه الاغانيه في favourite ⭐️ واضافه صفحه جديده تظهر المفضله بس  (يمكن استخدام UserDefault)
+struct RestaurantCategory
+{
+    var cateogry : String
+    var restaurantList : [Restaurant]
+    var catogryImage : String
+}
+
+```
+5. بعدها تعمل array of struct و تحتوي على جميع المعلومات لاستخدامها في التطبيق
+```Swift
+var categories : [RestaurantCategory] =
+[
+ RestaurantCategory(cateogry: "Italian", restaurantList: [
+                        Restaurant(restaurantName: "Pastamania", restaurantLocation: "Kuwait City", availableTable: 5, restaurantImage: "pastamania"),
+                        Restaurant(restaurantName: "Patio", restaurantLocation: "Avenue", availableTable: 9, restaurantImage: "patio")], catogryImage:  "Italian"),
+ RestaurantCategory(cateogry: "Burger", restaurantList: [
+                        Restaurant(restaurantName: "Elevation Burger", restaurantLocation: "kuwait City", availableTable: 8, restaurantImage: "elevation")], catogryImage: "burger")
+]
+
+```
 
 
-<img src="/Hw4Part2.gif" width="200px">
-
-### مقدمه عن الواجهات ذات الجدول 
- [اضغط هنا](https://app.code.kw/%D8%A8%D8%B1%D9%85%D8%AC%D8%A9-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D9%8A%D9%81%D9%88%D9%86-%D9%85%D8%B9-%D8%B3%D9%88%D9%8A%D9%81%D8%AA-Swift-KFAS/ios-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA-%D8%B0%D8%A7%D8%AA-%D9%88%D8%A7%D8%AC%D9%87%D8%A7%D8%AA-%D9%85%D8%AA%D8%B9%D8%AF%D8%AF%D8%A9-KFAS/%D8%AF%D8%B1%D8%B3-%D9%88%D8%A7%D8%AC%D9%87%D8%A7%D8%AA-%D8%B0%D8%A7%D8%AA-%D8%A7%D9%84%D8%AC%D8%AF%D9%88%D9%84-KFAS/%D9%85%D9%82%D8%AF%D9%85%D8%A9-%D8%B9%D9%86-%D8%A7%D9%84%D9%88%D8%A7%D8%AC%D9%87%D8%A7%D8%AA-%D8%B0%D8%A7%D8%AA-%D8%A7%D9%84%D8%AC%D8%AF%D9%88%D9%84-Table-Views-KFAS) للدرس
 
 
 
