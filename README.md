@@ -41,13 +41,12 @@ struct RestaurantCategory
 5. بعدها تعمل array of struct و تحتوي على جميع المعلومات لاستخدامها في التطبيق
 ```Swift
 var categories : [RestaurantCategory] =
-[
- RestaurantCategory(cateogry: "Italian", restaurantList: [
+[RestaurantCategory(cateogry: "Italian", restaurantList: [
                         Restaurant(restaurantName: "Pastamania", restaurantLocation: "Kuwait City", availableTable: 5, restaurantImage: "pastamania"),
                         Restaurant(restaurantName: "Patio", restaurantLocation: "Avenue", availableTable: 9, restaurantImage: "patio")], catogryImage:  "Italian"),
  RestaurantCategory(cateogry: "Burger", restaurantList: [
-                        Restaurant(restaurantName: "Elevation Burger", restaurantLocation: "kuwait City", availableTable: 8, restaurantImage: "elevation")], catogryImage: "burger")
-]
+                        Restaurant(restaurantName: "Elevation Burger", restaurantLocation: "kuwait City", availableTable: 8, restaurantImage: "elevation")], catogryImage: "burger")]
+
 
 ```
 
