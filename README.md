@@ -20,6 +20,7 @@
 3. قم بتجهيز اول صفحتين  من المشروع , اذا كان عندكم sign in خلو اخر شي، يفضل ان تبدوا Home Screen
 4. قم بصنع **Struct** خاص في برنامجك 
 - مثلا اذا كان مشروعك عن حجز مطاعم
+
 ```Swift  
 
 struct Restaurant
@@ -38,8 +39,13 @@ struct RestaurantCategory
 }
 
 ```
+</div>
+
 5. بعدها تعمل array of struct و تحتوي على جميع المعلومات لاستخدامها في التطبيق
+<div dir="ltr">
+
 ```Swift
+
 var categories : [RestaurantCategory] =
 [RestaurantCategory(cateogry: "Italian", restaurantList: [
                         Restaurant(restaurantName: "Pastamania", restaurantLocation: "Kuwait City", availableTable: 5, restaurantImage: "pastamania"),
@@ -49,6 +55,7 @@ var categories : [RestaurantCategory] =
 
 
 ```
+</div>
 
 
 
